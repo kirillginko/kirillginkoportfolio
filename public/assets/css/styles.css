@@ -210,6 +210,10 @@ img{
     width: 295px;
 }
 
+.home_h2{
+/*  margin-top: 10px;*/
+/*  margin-left: 10px;*/
+}
 /* ===== ABOUT =====*/
 .about__container{
     justify-items: center;
