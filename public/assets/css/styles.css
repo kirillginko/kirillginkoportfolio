@@ -175,6 +175,31 @@ img{
     background-color: var(--first-color);
 }
 
+/*effect-underline*/
+a.effect-underline:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  top: .5rem;
+  width: 50%;
+  border-bottom: 3px solid;
+  margin-top: 10px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0,1);
+  transform: scale(0,1);
+  color: #E8A87C;
+}
+
+a.effect-underline:hover:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
 /*===== HOME =====*/
 .home{
     position: relative;
@@ -365,6 +390,38 @@ img{
 .skills__img{
   border-radius: .5rem;
 }*/
+
+/* ===== 3D Card =====*/
+.tdimension {
+  width: 600px;
+  height: 600px;
+  margin: 20px auto 40px auto;
+  perspective: 1000px;
+}
+.tdimension a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("https://this.deakin.edu.au/wp-content/uploads/2019/06/coding-on-a-computer.jpg");
+  background-size: cover;
+  transform-style: preserve-3d;
+  transform: rotateX(70deg);
+  transition: all 0.8s;
+}
+.tdimension:hover a {
+  transform: rotateX(20deg);
+}
+.tdimension a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+}
 
 /* ===== PORTFOLIO =====*/
 .portfolio{
@@ -561,3 +618,5 @@ img{
         margin-right: auto;
     }
 }
+
+
