@@ -1,11 +1,11 @@
 const nodemailer = require('nodemailer');
 const mg = require('nodemailer-mailgun-transport');
-
+require('dotenv').config();
 // This is your API key that you retrieve from www.mailgun.com/cp (free up to 10K monthly emails)
 const auth = {
   auth: {
-    api_key: 'key-bc3a71bf47de9a619a1fd165e68b2f95',
-    domain: 'sandbox0d9ef26008b34a7a92a140fcbff84329.mailgun.org'
+    api_key: process.env.API_KEY,
+    domain: process.env.DOMAIN
   },
   // proxy: 'http://user:pass@localhost:8080' // optional proxy, default is false
 }

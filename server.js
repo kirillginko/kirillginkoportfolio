@@ -1,6 +1,9 @@
 const express = require('express');
+require('dotenv').config();
 const sendMail = require('./mail');
 const app = express();
+
+// Start Server
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Starting server at ${port}`);
@@ -13,6 +16,7 @@ app.use(express.urlencoded({
 }));
 app.use(express.json({}));
 
+// email form submit
 app.post('/email', (req, res) => {
   // send email
   const {name, email, text } = req.body;
