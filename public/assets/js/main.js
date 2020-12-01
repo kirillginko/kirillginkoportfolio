@@ -75,4 +75,24 @@ sr.reveal('.contact__text', {interval: 200})
 sr.reveal('.contact__input', {delay: 400})
 sr.reveal('.contact__button', {delay: 600})
 
+/*===== Contact Form Mailer =====*/
+
+$('form').on('submit', (e) => {
+  e.preventDefault();
+
+  const name = $('#name').val().trim();
+  const email = $('#email').val().trim();
+  const text = $('#text').val().trim();
+
+    const data = {
+      name,
+      email,
+      text
+    };
+
+    $.post('/email', data, function() {
+      console.log(data);
+    });
+  });
+
 

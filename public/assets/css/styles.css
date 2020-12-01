@@ -200,6 +200,10 @@ a.effect-underline:hover:after {
   transform: scale(1);
 }
 
+.imageburn{
+
+}
+
 /*===== HOME =====*/
 .home{
     position: relative;
@@ -478,7 +482,7 @@ a.effect-underline:hover:after {
 }
 .contact__input{
     width: 100%;
-    padding: .8rem;
+    padding: .9rem;
     outline: none;
     border: 1.5px solid var(--dark-color);
     font-size: var(--normal-font-size);
